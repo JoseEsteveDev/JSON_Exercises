@@ -1,0 +1,16 @@
+import json
+
+#Parte A. Crear un diccionario a partir de los datos dados. Luego, convertirlo en texto usando dos espacios de indentación
+
+py_dict = {'nombre':"Auriculares inalambricos", 'precio': 89.99, 'stock': True, 'categorias': ["electronica", "audio", "accesorios"], 'valoracion': None}
+
+text = json.dumps(py_dict, indent = 2)
+
+print(text)
+
+#Parte B. Convertir la cadena de texto a diccionario Python
+receta_json = '''{"plato": "paella", "raciones": 4, "ingredientes": ["arroz", "azafran","pollo", "pimiento"]}'''
+
+text = json.loads(receta_json)
+
+print(text["ingredientes"][0])
